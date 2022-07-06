@@ -14,6 +14,6 @@
     </p>
 
     <p>
-        {{ $post->content }}
+        {!!post->content !!}
     </p>
 @endsection
