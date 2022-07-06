@@ -5,10 +5,6 @@
 @endsection
 
 @section('body')
-    <div>
-        @yield('news')
-    </div>
-    <div>
-        @yield('providers')
-    </div>
+    @yield('post')
+    <a href="/news">back</a>
 @endsection
