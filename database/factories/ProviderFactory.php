@@ -21,7 +21,7 @@ class ProviderFactory extends Factory
     {
 
         $imgUrl = $this->faker->imageUrl();
-        $imgUrl = 'http://placekitten.com/200/300';
+        $imgUrl = 'http://placekitten.com/100/100';
 
         // create curl resource
         $ch = curl_init();
@@ -40,8 +40,6 @@ class ProviderFactory extends Factory
         curl_close($ch);
         $path = 'img/img_'.$this->faker->word . '.png';
         $img = file_put_contents(storage_path('app/public/').$path, $output);
-
-        echo $img;
 
         return [
             'name' => $this->faker->name,

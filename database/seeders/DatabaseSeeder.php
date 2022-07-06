@@ -19,5 +19,6 @@ class DatabaseSeeder extends Seeder
         //News::factory(10)->create();
         //Provider::factory()->create();
         $this->call(ProviderSeeder::class);
+        $this->call(NewsSeeder::class);
     }
 }

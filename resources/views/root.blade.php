@@ -1,8 +1,8 @@
-@extends('layouts.layout')
+@extends('layouts.root')
 
 @section('title', 'Home')
 
-@section('content')
+@section('news')
     @forelse ($news as $post)
         <a href="/news/{{ $post->slug }}">
             <div>
@@ -14,10 +14,11 @@
         No posts
     @endforelse
     <a href="/news">show all posts</a>
-    <br>
+@endsection
+
+@section('providers')
     @forelse ($providers as $provider)
         <img src="storage/{{ $provider->img }}" alt="problems occured while loading the image">
-        <hr>
     @empty
         No providers found
     @endforelse
