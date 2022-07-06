@@ -2,22 +2,19 @@
 
 namespace Database\Seeders;
 
-use App\Models\News;
 use App\Models\Provider;
 use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use Illuminate\Database\Seeder;
 
-class DatabaseSeeder extends Seeder
+class ProviderSeeder extends Seeder
 {
     /**
-     * Seed the application's database.
+     * Run the database seeds.
      *
      * @return void
      */
     public function run()
     {
-        //News::factory(10)->create();
-        //Provider::factory()->create();
-        $this->call(ProviderSeeder::class);
+        Provider::factory(5)->create();
     }
 }
