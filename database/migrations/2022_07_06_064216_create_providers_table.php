@@ -13,9 +13,18 @@ return new class extends Migration
      */
     public function up()
     {
+        /**
+         * This creates the table providers
+         * cols:
+         *  - id
+         *  - img
+         *  - url
+         *  - created_at
+         *  - updated_at
+         */
         Schema::create('providers', function (Blueprint $table) {
             $table->id();
-            $table->string('name')->unique();
+            $table->string('name')->unique(); //name of the provider
             $table->string('img')->unique();
             $table->string('url')->unique();
             $table->timestamps();

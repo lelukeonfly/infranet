@@ -13,12 +13,27 @@ return new class extends Migration
      */
     public function up()
     {
+        /**
+         * This creates the table News
+         * cols:
+         *  - id
+         *  - slug_de
+         *  - content_de
+         *  - title_it
+         *  - slug_ig
+         *  - content_it
+         *  - created_at
+         *  - updated_at
+         */
         Schema::create('news', function (Blueprint $table) {
             $table->id();
-            $table->string('title');
-            $table->string('slug')->unique(); //link to post in slug form so its not /news/76 but /news/glasfaser-in-montan
-            $table->text('content');
-            $table->timestamps();
+            $table->string('title_de'); //title of news article
+            $table->string('slug_de')->unique(); //link to post in slug form so its not /news/76 but /news/glasfaser-in-montan
+            $table->text('content_de'); //content of the article
+            $table->string('title_it');
+            $table->string('slug_it')->unique();
+            $table->text('content_it');
+            $table->timestamps(); //contains timestamps of when row created and when modified
         });
     }
 

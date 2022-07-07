@@ -1,0 +1,22 @@
+# Datenbank
+- Die Datenbank migrationsdateien befinden sich in `database/migrations`
+- Diese sind zuständig, die Datenbank zu erstellen und werden aufsteigend nach dessen Dateinamen ausgeführt
+- Man kann die Datenbank mit dem Befehl `php artisan migrate` migrieren
+- Mit dem Befehl `php artisan migrate:status` wird ausgegeben, welche Migrationsdateien ausgeführt wurden
+
+# Routing
+- Die Ruten befinden sich in `routes/web.php`
+- Die statische Methode get des Objekts `Route` nimmt als ersten Parameter die get-request entgegen, wobei die geschwungenen Klammern als Platzhalter stehen für die Eingabe des Benutzers oder eines Verweises. Die Bezeichnung des Parameters ist beliebig, jedoch muss diese mit der Variable der Instanz des Objekts übereinstimmen, welches in die Funktion des zweiten Parameters übergeben wird.
+	- Die Bezeichnung nach dem Doppelpunkt im ersten Parameter, in den Klammern steht für den Parameter des Modells/Datenbankspalte, somit kann auch statt des Primärschlüssels auch ein Slug oder ein Benutzernamen verwendet werden.
+	- Die Funktion gibt anschließend die Methode view zurück, in welcher der erste Parameter für das [Blade Template](/https://laravel.com/docs/9.x/blade "Blade templates") steht und als zweiter Parameter wird ein Array übergeben, in welchem der Key für die Variable im [Blade Template](/https://laravel.com/docs/9.x/blade "Blade templates") steht mit dessen zugewiesenen Wert.
+
+
+# Die Ansicht
+- ## Blade Templates
+	- Die Ansicht wird mit [Blade templates](/https://laravel.com/docs/9.x/blade "Blade templates") generiert
+	- Die Dateien zur Ansicht befinden sich in `resources/views`
+	- Die jeweiligen Ansichten im `resources/views` Ordner erben die Ansicht von den Dateien, welche sich im `resources/views/layouts` befinden. Diese erben wiederrum von dem Masterlayout, welches sich im Ordner `resources/layouts/masterlayout` befindet
+- ## Styling
+	- Das styling der Website erflogt mit [Bootstrap](https://getbootstrap.com/ "Bootstrap")
+	- Für die Icons wird [Fontawesome](https://fontawesome.com/ "Fontawesome") verwendet
+	- Die scss Dateien von [Bootstrap](https://getbootstrap.com/ "Bootstrap") und [Fontawesome](https://fontawesome.com/ "Fontawesome")  befinden sich im `x/x/x` Ordner und werden mit dem Befehl `x/x/x` kompiliert. Die kompilierte Datei wird in den Ordner `x/x/x` kompiliert und erhält den Dateinamen `app.css`.

@@ -17,9 +17,12 @@ class NewsFactory extends Factory
     public function definition()
     {
         return [
-            'title' => $this->faker->sentence,
-            'slug' => $this->faker->slug,
-            'content' => $this->faker->text
+            'title_de' => $this->faker->sentence,
+            'slug_de' => $this->faker->slug,
+            'content_de' => $this->faker->text,
+            'title_it' => $this->faker->sentence,
+            'slug_it' => $this->faker->slug,
+            'content_it' => $this->faker->text
         ];
     }
 }
