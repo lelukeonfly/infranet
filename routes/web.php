@@ -15,21 +15,37 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function(){
-    return view('root', [
-        'news' => News::limit(6)->latest()->get(),
-        'providers' => Provider::inRandomOrder()->get()
-    ]);
-});
+//tmp redirect
+Route::redirect('/', app()->getLocale(), 301);
 
-Route::get('/news', function () {
-    return view('news', [
-        'news' => News::get()
-    ]);
-});
+Route::group([
+    'prefix' => '{lang}',
+    'where' => ['lang' => 'de|it']
+], function () {
 
-Route::get('/news/{post:slug}', function (News $post){
-    return view('post',[
-        'post' => $post
-    ]);
+    //tmp redirect
+    Route::redirect('/', '/'.app()->getLocale().'/home', 301);
+
+    Route::get('/home', function ($lang) {
+        return view('root', [
+            'lang' => $lang,
+            'news' => News::limit(6)->latest()->get(),
+            'providers' => Provider::inRandomOrder()->get(),
+        ]);
+    })->name('home');
+
+
+    Route::get('/news', function ($lang) {
+        return view('news', [
+            'lang' => $lang,
+            'news' => News::get(),
+        ]);
+    })->name('news');
+
+    Route::get('/news/{article:slug_'.app()->getLocale().'}', function ($lang ,News $article) {
+        return view('article', [
+            'lang' => $lang,
+            'article' => $article,
+        ]);
+    })->name('article');
 });

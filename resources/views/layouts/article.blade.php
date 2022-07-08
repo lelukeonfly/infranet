@@ -5,6 +5,6 @@
 @endsection
 
 @section('body')
-    @yield('post')
-    <a href="/news">back</a>
+    @yield('article')
+    {{-- <a href="/news">back</a> --}}
 @endsection

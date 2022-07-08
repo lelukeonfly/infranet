@@ -6,5 +6,4 @@
 
 @section('body')
     @yield('news')
-    <a href="/">back</a>
 @endsection
