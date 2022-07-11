@@ -2,6 +2,21 @@
 
 @section('title', 'Home')
 
+@section('container1')
+    {{ __('company') }}
+    {{ __('container1.body') }}
+    {{ __('container1.section1') }}
+    {{ __('container1.section2') }}
+    {{ __('container1.section3') }}
+@endsection
+
+@section('container2')
+    {{ __('container2.title') }}
+    {{ __('container2.body') }}
+    {{ __('container2.municip') }}
+    {{ __('container2.frac') }}
+@endsection
+
 @section('news')
 
     @forelse ($news as $article)
