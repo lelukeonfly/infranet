@@ -1,11 +1,7 @@
 <section class="row align-items-center m-0 home">
     <div class="p-4 rounded col-xl-6 m-auto">
-        <h1 class="text-uppercase text-center mb-5">infranet spa</h1>
-        <p class="text-center mb-3 lh-lg">lorem ipsum dolor sit amet consectetnventore ex exercitationem doloribus? modi
-            nisi
-            hic accusantium provident voluptates! porro expedita repudiandae dolores rerum. cumque omnis molestiae quia
-            placeat. et, possimus magnam vero assumenda ullam veritatis dolores in velit id porro beatae, obcaecati
-            recusandae, minus officiis libero iste.</p>
+        <h1 class="text-uppercase text-center mb-5">{{ __('company') }}</h1>
+        <p class="text-center mb-3 lh-lg">{{ __('container1.body') }}</p>
         <div class="d-flex justify-content-around">
             <div class="text-center mx-3">
                 <!-- <i class="fa-solid fa-business-time m-3 p-2 rounded-circle bg-white text-primary"></i> -->

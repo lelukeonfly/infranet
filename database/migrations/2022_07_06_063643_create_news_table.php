@@ -17,6 +17,8 @@ return new class extends Migration
          * This creates the table News
          * cols:
          *  - id
+         *  - banner
+         *  - title_de
          *  - slug_de
          *  - content_de
          *  - title_it
@@ -27,6 +29,7 @@ return new class extends Migration
          */
         Schema::create('news', function (Blueprint $table) {
             $table->id();
+            $table->string('banner'); //titelbild
             $table->string('title_de'); //title of news article
             $table->string('slug_de')->unique(); //link to post in slug form so its not /news/76 but /news/glasfaser-in-montan
             $table->text('content_de'); //content of the article
