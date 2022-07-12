@@ -8,4 +8,15 @@ use Illuminate\Database\Eloquent\Model;
 class Address extends Model
 {
     use HasFactory;
+
+    public function municipality()
+    {
+        return $this->belongsTo(Municipality::class);
+    }
+
+    public function street()
+    {
+        return $this->belongsTo(Street::class);
+    }
+
 }

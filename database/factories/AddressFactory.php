@@ -17,6 +17,8 @@ class AddressFactory extends Factory
     public function definition()
     {
         return [
+            'municipality_id' => '1',
+            'fraction_id' => '1',
             'postal' => $this->faker->numberBetween(10000,99999),
             'istatnciv' => $this->faker->sentence,
             'egon' => $this->faker->randomAscii,

@@ -13,12 +13,10 @@ return new class extends Migration
      */
     public function up()
     {
-        Schema::create('numbers', function (Blueprint $table) {
+        Schema::create('number_street', function (Blueprint $table) {
             $table->id();
-            //foreign keys
-            //$table->integer('street_id');
-            //foreign keys/
-            $table->string('number');
+            $table->integer('number_id')->unsigned();
+            $table->integer('street_id')->unsigned();
             $table->timestamps();
         });
     }
@@ -30,6 +28,6 @@ return new class extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('numbers');
+        Schema::dropIfExists('number_street');
     }
 };
