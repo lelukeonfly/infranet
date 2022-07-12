@@ -23,20 +23,25 @@ return new class extends Migration
          *  - str_de
          *  - num
          */
+
+/**
+TODO:
+ - REWORK FACTORY
+ - REWORK DATABASE RELATIONS AND
+ - NEW TABLES
+ */
+
         Schema::create('addresses', function (Blueprint $table) {
             $table->id();
             $table->mediumInteger('postal');
-            $table->string('municip_de');
-            $table->string('frac_de');
-            $table->string('str_de');
-            $table->string('num');
-            $table->string('municip_it');
-            $table->string('frac_it');
-            $table->string('str_it');
+            //foreign keys
+            $table->integer('municipality_id');//done
+            $table->integer('fraction_id');//done
+            $table->integer('street_id');//done
+            $table->integer('number_id');//done
+            //foreign keys/
             $table->string('istatnciv');
             $table->string('egon');
-            // $table->float('lat');
-            // $table->float('long');
             $table->float('lat', 16, 14);
             $table->float('long', 17, 14);
             $table->timestamps();
