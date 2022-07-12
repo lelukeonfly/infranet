@@ -1,7 +1,7 @@
 <nav class="navbar navbar-expand-lg bg-white align-items-center" id="navbar">
   <div class="container-fluid">
     <a class="navbar-brand" href="#">
-        <img src="img/logos/infranet.png" alt="Infranet Logo" height="50rem">
+        <img src="/storage/img/logos/infranet.png" alt="Infranet Logo" height="50rem">
         <!-- <img src="img/logos/infranet.png" alt="Infranet Logo" class="img-fluid col-1"> -->
     </a>
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">

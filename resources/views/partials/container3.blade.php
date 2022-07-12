@@ -21,9 +21,9 @@
 
                             @forelse ($providers as $provider)
                                 <a href="{{ $provider->url }}" class="bg-white rounded">
-                                    <div class="d-flex align-items-center unternehmen p-2">
+                                    <div class="d-flex align-items-center unternehmen">
                                         <img src="/storage/{{ $provider->img }}"
-                                            alt="problems occured while loading the image" class="img-fluid"
+                                            alt="problems occured while loading the image" class="img-fluid m-auto"
                                             loading="lazy">
                                     </div>
                                 </a>

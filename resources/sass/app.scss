@@ -1,12 +1,120 @@
-// Fonts
-@import url('https://fonts.googleapis.com/css?family=Nunito');
+@import '~bootstrap/scss/functions';
+@import '~bootstrap/scss/variables';
+@import '~bootstrap/scss/mixins';
 
-// Variables
+@import 'colors';
 @import 'variables';
 
-// Bootstrap
 @import '~bootstrap/scss/bootstrap';
 
-*{
-    background-color: #000;
+@import "../fontawesome/scss/fontawesome";
+@import "../fontawesome/scss/solid";
+
+
+// fontawesome documentation:
+// https://fontawesome.com/docs/web/setup/upgrade/scss-less
+
+
+* {
+    box-sizing: border-box;
+    word-wrap: break-word;
+}
+
+html {
+    font-family: sans-serif;
+    scroll-snap-type: mandatory;
+    scroll-snap-points-y: repeat(100vh);
+    scroll-snap-type: y mandatory;
+}
+
+
+section {
+    padding: 7em;
+    min-height: 100vh;
+    scroll-snap-align: start;
+    position: relative;
+
+    &:last-of-type {
+        background-color: $black;
+        color: $primary;
+        scroll-snap-align: start;
+    }
+
+}
+
+
+section.home {
+
+    $bgpath: "/storage/img/bg/";
+    $type: ".jpg";
+    $bgimgs: "1""light-technology-cable-line-blue-optics-573469-pxhere.com",
+    "2""landscape-nature-rock-wilderness-walking-mountain-1382392-pxhere.com",
+    "3""landscape-tree-nature-wilderness-mountain-snow-1372633-pxhere.com",
+    "4""mountain-snow-winter-mountain-range-high-glacier-607264-pxhere.com",
+    "5""landscape-nature-mountain-snow-winter-view-854303-pxhere.com",
+    "6""landscape-nature-wilderness-mountain-trail-meadow-498047-pxhere.com";
+
+
+    @each $child,
+    $img in $bgimgs {
+        &:nth-of-type(#{$child}) {
+            background-image: url("#{$bgpath}/#{$img}#{$type}");
+            //background-color: $light;
+            background-size: cover;
+            background-position: center center;
+        }
+    }
+
+    &>div {
+        background: rgba($color: $dark, $alpha: 0.65);
+        color: $light;
+    }
+}
+
+
+
+.form-group .form-label:after {
+    content: "*";
+    color: $danger;
+}
+
+#navbar {
+    //background-color: $orange-700;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    display: block;
+    transition: top 0.3s;
+    z-index: 99;
+}
+
+#navbar a {
+    float: left;
+    display: block;
+    text-align: center;
+    padding: 1em;
+    text-decoration: none;
+}
+
+/*
+#navbar a:hover {
+    background-color: #ddd;
+    color: black;
+}
+*/
+
+.unternehmen {
+    height: 8em;
+    width: 8em;
+}
+
+.news {
+    color: $dark;
+    & p{
+        display: -webkit-box;
+        -webkit-line-clamp: 4;
+        -webkit-box-orient: vertical;
+        overflow: hidden;
+        text-overflow: ellipsis;
+    }
 }

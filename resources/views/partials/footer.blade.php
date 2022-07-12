@@ -6,7 +6,7 @@
                     <svg class="bi me-2" width="40" height="32">
                         <use xlink:href="#bootstrap"></use>
                     </svg>
-                    <img src="img/logos/infranet.png" alt="" class="img-fluid">
+                    <img src="/storage/img/logos/infranet.png" alt="" class="img-fluid">
                 </a>
                 <p class="text-secondary">©
                     <?= date('Y') ?>
