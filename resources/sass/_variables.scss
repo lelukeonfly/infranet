@@ -14,8 +14,8 @@ $accordion-border-color:                  rgba($white, .7);
 
 //$accordion-button-padding-y:              $accordion-padding-y;
 //$accordion-button-padding-x:              $accordion-padding-x;
-//$accordion-button-color:                  $accordion-color;
-//$accordion-button-bg:                     $accordion-bg;
+$accordion-button-color:                  $accordion-color;
+$accordion-button-bg:                     $accordion-bg;
 //$accordion-transition:                    $btn-transition, border-radius .15s ease;
 $accordion-button-active-bg:              rgba($color: $primary, $alpha: 30%);
 $accordion-button-active-color:           $white;
