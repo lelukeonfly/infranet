@@ -1,4 +1,5 @@
 // window._ = require('lodash');
+//console.log('test')
 
 // try {
 //     require('bootstrap');
