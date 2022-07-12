@@ -12,7 +12,7 @@
                 <div id="flush-collapseOne" class="accordion-collapse collapse" aria-labelledby="flush-headingOne"
                     data-bs-parent="#accordionFlushExample">
                     <div class="accordion-body lh-lg">
-                        {{ __('container4.dropdown.body1') }}
+                        {!! __('container4.dropdown.body1') !!}
                     </div>
                 </div>
             </div>
@@ -26,7 +26,7 @@
                 <div id="flush-collapseTwo" class="accordion-collapse collapse" aria-labelledby="flush-headingTwo"
                     data-bs-parent="#accordionFlushExample">
                     <div class="accordion-body lh-lg">
-                        {{ __('container4.dropdown.body2') }}
+                        {!! __('container4.dropdown.body2') !!}
                     </div>
                 </div>
             </div>
@@ -40,7 +40,7 @@
                 <div id="flush-collapseThree" class="accordion-collapse collapse" aria-labelledby="flush-headingThree"
                     data-bs-parent="#accordionFlushExample">
                     <div class="accordion-body lh-lg">
-                        {{ __('container4.dropdown.body3') }}
+                        {!! __('container4.dropdown.body3') !!}
                     </div>
                 </div>
             </div>
@@ -54,7 +54,7 @@
                 <div id="flush-collapseFour" class="accordion-collapse collapse" aria-labelledby="flush-headingFour"
                     data-bs-parent="#accordionFlushExample">
                     <div class="accordion-body lh-lg">
-                        {{ __('container4.dropdown.body4') }}
+                        {!! __('container4.dropdown.body4') !!}
                     </div>
                 </div>
             </div>
