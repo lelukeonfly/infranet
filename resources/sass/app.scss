@@ -1,11 +1,13 @@
-@import '/node_modules/bootstrap/scss/functions';
-@import '/node_modules/bootstrap/scss/variables';
-@import '/node_modules/bootstrap/scss/mixins';
+// @import '/node_modules/bootstrap/scss/functions';
+// @import '/node_modules/bootstrap/scss/variables';
+// @import '/node_modules/bootstrap/scss/mixins';
+
 
 @import 'colors';
 @import 'variables';
 
-@import '~bootstrap/scss/bootstrap';
+@import '/node_modules/bootstrap/scss/bootstrap';
+// @import '~bootstrap/scss/bootstrap';
 
 $fa-font-path: "/public/storage/webfonts";
 @import "/node_modules/@fortawesome/fontawesome-free/scss/fontawesome";
@@ -13,8 +15,16 @@ $fa-font-path: "/public/storage/webfonts";
 @import "/node_modules/@fortawesome/fontawesome-free/scss/brands";
 @import "/node_modules/@fortawesome/fontawesome-free/scss/regular";
 
-// @import "../fontawesome/scss/fontawesome";
-// @import "../fontawesome/scss/solid";
+// $theme-colors: (
+//     primary: $primary,
+//     secondary: $secondary,
+//     success: $success,
+//     info: $info,
+//     warning: $warning,
+//     danger: $danger,
+//     light: $light,
+//     dark: $dark
+//     );
 
 
 * {
@@ -68,6 +78,7 @@ section.home {
     }
 
     &>div {
+        // styling of container in center of site
         background: rgba($color: $dark, $alpha: 0.65);
         color: $light;
     }
@@ -80,8 +91,10 @@ section.home {
     color: $danger;
 }
 
+
+// in blade übertragen
+
 #navbar {
-    //background-color: $orange-700;
     position: fixed;
     top: 0;
     width: 100%;
@@ -91,6 +104,7 @@ section.home {
 }
 
 #navbar a {
+    color: $dark;
     float: left;
     display: block;
     text-align: center;
@@ -98,12 +112,10 @@ section.home {
     text-decoration: none;
 }
 
-/*
-#navbar a:hover {
-    background-color: #ddd;
-    color: black;
-}
-*/
+// #navbar a:hover {
+//     background-color: #ddd;
+//     color: black;
+// }
 
 .unternehmen {
     height: 8em;
