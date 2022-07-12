@@ -19,6 +19,7 @@ return new class extends Migration
             //$table->integer('street_id');
             // $table->integer('fraction_id');//fk in fraction because n relation is there
             //foreign keys/
+            $table->mediumInteger('postal');
             $table->string('name_de');
             $table->string('name_it');
             $table->timestamps();

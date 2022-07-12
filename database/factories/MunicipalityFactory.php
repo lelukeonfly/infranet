@@ -19,6 +19,7 @@ class MunicipalityFactory extends Factory
         return [
             'name_de' => $this->faker->city,
             'name_it' => $this->faker->city,
+            'postal' => $this->faker->numberBetween(10000,99999),
         ];
     }
 }

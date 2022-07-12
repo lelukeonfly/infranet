@@ -2,6 +2,10 @@
 
 namespace Database\Factories;
 
+use App\Models\Fraction;
+use App\Models\Municipality;
+use App\Models\Number;
+use App\Models\Street;
 use Illuminate\Database\Eloquent\Factories\Factory;
 
 /**
@@ -17,9 +21,10 @@ class AddressFactory extends Factory
     public function definition()
     {
         return [
-            'municipality_id' => '1',
-            'fraction_id' => '1',
-            'postal' => $this->faker->numberBetween(10000,99999),
+            'municipality_id' => Municipality::factory(5)->create(),
+            'fraction_id' => Fraction::factory(5)->create(),
+            'street_id' => Street::factory(5)->create(),
+            'number_id' => Number::factory(5)->create(),
             'istatnciv' => $this->faker->sentence,
             'egon' => $this->faker->randomAscii,
             'lat' => $this->faker->numerify('##.############'),

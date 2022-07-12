@@ -33,7 +33,6 @@ TODO:
 
         Schema::create('addresses', function (Blueprint $table) {
             $table->id();
-            $table->mediumInteger('postal');
             //foreign keys
             $table->integer('municipality_id');//done
             $table->integer('fraction_id');//done
