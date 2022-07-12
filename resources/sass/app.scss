@@ -1,18 +1,20 @@
-@import '~bootstrap/scss/functions';
-@import '~bootstrap/scss/variables';
-@import '~bootstrap/scss/mixins';
+@import '/node_modules/bootstrap/scss/functions';
+@import '/node_modules/bootstrap/scss/variables';
+@import '/node_modules/bootstrap/scss/mixins';
 
 @import 'colors';
 @import 'variables';
 
 @import '~bootstrap/scss/bootstrap';
 
-@import "../fontawesome/scss/fontawesome";
-@import "../fontawesome/scss/solid";
+$fa-font-path: "/public/storage/webfonts";
+@import "/node_modules/@fortawesome/fontawesome-free/scss/fontawesome";
+@import "/node_modules/@fortawesome/fontawesome-free/scss/solid";
+@import "/node_modules/@fortawesome/fontawesome-free/scss/brands";
+@import "/node_modules/@fortawesome/fontawesome-free/scss/regular";
 
-
-// fontawesome documentation:
-// https://fontawesome.com/docs/web/setup/upgrade/scss-less
+// @import "../fontawesome/scss/fontawesome";
+// @import "../fontawesome/scss/solid";
 
 
 * {
@@ -110,7 +112,8 @@ section.home {
 
 .news {
     color: $dark;
-    & p{
+
+    & p {
         display: -webkit-box;
         -webkit-line-clamp: 4;
         -webkit-box-orient: vertical;
