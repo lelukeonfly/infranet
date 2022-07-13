@@ -8,4 +8,9 @@ use Illuminate\Database\Eloquent\Model;
 class Fraction extends Model
 {
     use HasFactory;
+
+    public function municipalties()
+    {
+        return $this->belongsTo(Municipality::class);
+    }
 }

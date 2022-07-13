@@ -15,6 +15,7 @@ return new class extends Migration
     {
         Schema::table('fractions', function (Blueprint $table) {
             $table->foreign('municipality_id')->references('id')->on('municipalities');
+            // $table->unsignedBigInteger('municipality_id')->constraint();
         });
     }
 
