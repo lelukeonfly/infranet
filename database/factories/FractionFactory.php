@@ -17,8 +17,8 @@ class FractionFactory extends Factory
     public function definition()
     {
         return [
-            'name_de' => $this->faker->city,
-            'name_it' => $this->faker->city,
+            'name_de' => $this->faker->city(),
+            'name_it' => $this->faker->city(),
         ];
     }
 }

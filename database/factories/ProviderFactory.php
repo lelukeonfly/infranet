@@ -38,15 +38,15 @@ class ProviderFactory extends Factory
 
         // close curl resource to free up system resources
         curl_close($ch);
-        $path = 'providers/img_'.$this->faker->word . '.png';
+        $path = 'providers/img_'.$this->faker->word() . '.png';
         $img = file_put_contents(storage_path('app/public/').$path, $output);
 
         return [
-            'name' => $this->faker->name,
+            'name' => $this->faker->name(),
             //'img' => $img,
             'img' => $path,
             //'img' => $this->faker->image,
-            'url' => $this->faker->url
+            'url' => $this->faker->url(),
         ];
     }
 }

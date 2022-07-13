@@ -17,20 +17,20 @@ class AddressSeeder extends Seeder
      */
     public function run()
     {
-        Municipality::factory(10)//create 10 Municipalities
-        ->create()
-        ->each(function ($municipality)
-        {
-            Fraction::factory(5)//for every municipality create 5 Fractions it belongs to
-            ->create(['municipality_id' => $municipality->id]);
+        // Municipality::factory(10)//create 10 Municipalities
+        // ->create()
+        // ->each(function ($municipality)
+        // {
+        //     Fraction::factory(5)//for every municipality create 5 Fractions it belongs to
+        //     ->create(['municipality_id' => $municipality->id]);
 
-            Street::factory(5)
-            ->create(/*['municipality_id' => $municipality->id]*/)//TODO: check if working because n:m relation
-            ->each(function ($street)
-            {
-                Number::factory(5)
-            ->create(/*['street_id' => $street->id]*/);//TODO: check if working because n:m relation
-            });
-        });
+        //     Street::factory(5)
+        //     ->create(/*['municipality_id' => $municipality->id]*/)//TODO: check if working because n:m relation
+        //     ->each(function ($street)
+        //     {
+        //         Number::factory(5)
+        //     ->create(/*['street_id' => $street->id]*/);//TODO: check if working because n:m relation
+        //     });
+        // });
     }
 }

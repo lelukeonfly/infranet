@@ -17,7 +17,7 @@ class NumberFactory extends Factory
     public function definition()
     {
         return [
-            'number' => $this->faker->buildingNumber,
+            'number' => $this->faker->buildingNumber(),
         ];
     }
 }

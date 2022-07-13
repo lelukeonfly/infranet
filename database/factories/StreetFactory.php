@@ -17,8 +17,8 @@ class StreetFactory extends Factory
     public function definition()
     {
         return [
-            'name_de' => $this->faker->streetName,
-            'name_it' => $this->faker->streetName,
+            'name_de' => $this->faker->streetName(),
+            'name_it' => $this->faker->streetName(),
         ];
     }
 }

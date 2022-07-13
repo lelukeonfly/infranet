@@ -25,8 +25,8 @@ class AddressFactory extends Factory
             'fraction_id' => Fraction::factory(5)->create(),
             'street_id' => Street::factory(5)->create(),
             'number_id' => Number::factory(5)->create(),
-            'istatnciv' => $this->faker->sentence,
-            'egon' => $this->faker->randomAscii,
+            'istatnciv' => $this->faker->sentence(),
+            'egon' => $this->faker->randomAscii(),
             'lat' => $this->faker->numerify('##.############'),
             'long' => $this->faker->numerify('###.############')
         ];

@@ -35,17 +35,17 @@ class NewsFactory extends Factory
 
         // close curl resource to free up system resources
         curl_close($ch);
-        $path = 'banner/img_'.$this->faker->word . '.png';
+        $path = 'banner/img_'.$this->faker->word() . '.png';
         file_put_contents(storage_path('app/public/').$path, $output);
 
         return [
             'banner' => $path,
-            'title_de' => $this->faker->sentence,
-            'slug_de' => $this->faker->slug,
-            'content_de' => $this->faker->text,
-            'title_it' => $this->faker->sentence,
-            'slug_it' => $this->faker->slug,
-            'content_it' => $this->faker->text
+            'title_de' => $this->faker->sentence(),
+            'slug_de' => $this->faker->slug(),
+            'content_de' => $this->faker->text(),
+            'title_it' => $this->faker->sentence(),
+            'slug_it' => $this->faker->slug(),
+            'content_it' => $this->faker->text(),
         ];
     }
 }
