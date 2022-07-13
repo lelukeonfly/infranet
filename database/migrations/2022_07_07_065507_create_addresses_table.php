@@ -35,7 +35,7 @@ TODO:
             $table->id();
             //foreign keys
             $table->unsignedBigInteger('municipality_id');//done
-            $table->unsignedBigInteger('fraction_id');//done
+            $table->unsignedBigInteger('fraction_id')->nullable();//done
             $table->unsignedBigInteger('street_id');//done
             $table->unsignedBigInteger('number_id');//done
             //foreign keys/
