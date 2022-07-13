@@ -16,28 +16,12 @@ class RelationSeeder extends Seeder
      */
     public function run()
     {
-        Municipality::factory(5)->create();
-        //$municipalities = Municipality::all()->pluck('id');
+        $amount = 10;
 
-
-        foreach (Municipality::all() as $municipality) {
-
-            Street::factory(5)->create();
-            //$streets = Street::all()->pluck('id');
-            $streets = Street::inRandomOrder()->take(5)->pluck('id');
-
-            $municipality->streets()->attach($streets);
-
-            foreach (Street::all() as $street) {
-
-                Number::factory(5)->create();
-                // $numbers = Number::all()->pluck('id');
-                $numbers = Number::inRandomOrder()->take(5)->pluck('id');
-
-                $street->numbers()->attach($numbers);
-
-            }
-
-        }
+        Municipality::factory($amount)->create()->each(function ($mun) use ($amount) {
+            $mun->streets()->attach(Street::factory($amount)->create()->each(function ($str) use ($amount) {
+                $str->numbers()->attach(Number::factory($amount)->create());
+            }));
+        });
     }
 }
