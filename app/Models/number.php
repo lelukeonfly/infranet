@@ -8,4 +8,9 @@ use Illuminate\Database\Eloquent\Model;
 class Number extends Model
 {
     use HasFactory;
+
+    public function streets()
+    {
+        return $this->belongsToMany(Street::class);
+    }
 }

@@ -14,10 +14,12 @@ return new class extends Migration
     public function up()
     {
         Schema::create('number_street', function (Blueprint $table) {
-            $table->id();
-            $table->unsignedBigInteger('number_id');
-            $table->unsignedBigInteger('street_id');
-            $table->timestamps();
+            // $table->id();
+            // $table->unsignedBigInteger('number_id');
+            // $table->unsignedBigInteger('street_id');
+            // $table->timestamps();
+            $table->foreignId('number_id')->constrained();
+            $table->foreignId('street_id')->constrained();
         });
     }
 

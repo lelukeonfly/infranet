@@ -26,9 +26,10 @@ return new class extends Migration
 
 /**
 TODO:
- - REWORK FACTORY
- - REWORK DATABASE RELATIONS AND
- - NEW TABLES
+ - REWRITE COMMENTS OF DATABASE STRUCTURE
+ - REWORK FACTORY AND SEEDER -> ON IT
+ - REWORK DATABASE RELATIONS AND -> OK
+ - NEW TABLES -> OK
  */
 
         Schema::create('addresses', function (Blueprint $table) {

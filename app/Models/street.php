@@ -13,4 +13,9 @@ class Street extends Model
     {
         return $this->belongsToMany(Municipality::class);
     }
+
+    public function numbers()
+    {
+        return $this->belongsToMany(Number::class);
+    }
 }
