@@ -16,7 +16,7 @@ return new class extends Migration
         Schema::create('fractions', function (Blueprint $table) {
             $table->id();
             //foreign keys
-            $table->integer('municipality_id');
+            $table->unsignedBigInteger('municipality_id');
             //foreign keys/
             $table->string('name_de');
             $table->string('name_it');

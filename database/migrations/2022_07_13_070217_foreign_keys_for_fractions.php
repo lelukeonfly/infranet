@@ -13,11 +13,8 @@ return new class extends Migration
      */
     public function up()
     {
-        Schema::create('municipality_street', function (Blueprint $table) {
-            $table->id();
-            $table->unsignedBigInteger('municipality_id');
-            $table->unsignedBigInteger('street_id');
-            $table->timestamps();
+        Schema::table('fractions', function (Blueprint $table) {
+            $table->foreign('municipality_id')->references('id')->on('municipalities');
         });
     }
 
@@ -28,6 +25,6 @@ return new class extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('municipality_street');
+        //
     }
 };

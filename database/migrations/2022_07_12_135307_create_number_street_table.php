@@ -15,8 +15,8 @@ return new class extends Migration
     {
         Schema::create('number_street', function (Blueprint $table) {
             $table->id();
-            $table->integer('number_id')->unsigned();
-            $table->integer('street_id')->unsigned();
+            $table->unsignedBigInteger('number_id');
+            $table->unsignedBigInteger('street_id');
             $table->timestamps();
         });
     }

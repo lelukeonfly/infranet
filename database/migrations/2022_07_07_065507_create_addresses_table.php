@@ -34,10 +34,10 @@ TODO:
         Schema::create('addresses', function (Blueprint $table) {
             $table->id();
             //foreign keys
-            $table->integer('municipality_id');//done
-            $table->integer('fraction_id');//done
-            $table->integer('street_id');//done
-            $table->integer('number_id');//done
+            $table->unsignedBigInteger('municipality_id');//done
+            $table->unsignedBigInteger('fraction_id');//done
+            $table->unsignedBigInteger('street_id');//done
+            $table->unsignedBigInteger('number_id');//done
             //foreign keys/
             $table->string('istatnciv');
             $table->string('egon');
