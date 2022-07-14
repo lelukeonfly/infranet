@@ -1,64 +1,43 @@
-<p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400"></a></p>
+# Datenbank
+- Die Datenbank migrationsdateien befinden sich in `database/migrations`
+- Diese sind zuständig, die Datenbank zu erstellen und werden aufsteigend nach dessen Dateinamen ausgeführt
+- Man kann die Datenbank mit dem Befehl `php artisan migrate` migrieren
+- Mit dem Befehl `php artisan migrate:status` wird ausgegeben, welche Migrationsdateien ausgeführt wurden
 
-<p align="center">
-<a href="https://travis-ci.org/laravel/framework"><img src="https://travis-ci.org/laravel/framework.svg" alt="Build Status"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/dt/laravel/framework" alt="Total Downloads"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/v/laravel/framework" alt="Latest Stable Version"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
-</p>
+----
 
-## About Laravel
+# Routing
+- Die Ruten befinden sich in `routes/web.php`
+- Die statische Methode get des Objekts `Route` nimmt als ersten Parameter die get-request entgegen, wobei die geschwungenen Klammern als Platzhalter stehen für die Eingabe des Benutzers oder eines Verweises. Die Bezeichnung des Parameters ist beliebig, jedoch muss diese mit der Variable der Instanz des Objekts übereinstimmen, welches in die Funktion des zweiten Parameters übergeben wird.
+	- Die Bezeichnung nach dem Doppelpunkt im ersten Parameter, in den Klammern steht für den Parameter des Modells/Datenbankspalte, somit kann auch statt des Primärschlüssels auch ein Slug oder ein Benutzernamen verwendet werden.
+	- Die Funktion gibt anschließend die Methode view zurück, in welcher der erste Parameter für das [Blade Template](/https://laravel.com/docs/9.x/blade "Blade templates") steht und als zweiter Parameter wird ein Array übergeben, in welchem der Key für die Variable im [Blade Template](/https://laravel.com/docs/9.x/blade "Blade templates") steht mit dessen zugewiesenen Wert.
 
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
+----
 
-- [Simple, fast routing engine](https://laravel.com/docs/routing).
-- [Powerful dependency injection container](https://laravel.com/docs/container).
-- Multiple back-ends for [session](https://laravel.com/docs/session) and [cache](https://laravel.com/docs/cache) storage.
-- Expressive, intuitive [database ORM](https://laravel.com/docs/eloquent).
-- Database agnostic [schema migrations](https://laravel.com/docs/migrations).
-- [Robust background job processing](https://laravel.com/docs/queues).
-- [Real-time event broadcasting](https://laravel.com/docs/broadcasting).
+# Ansicht
+- ## Blade Templates
+	- Die Ansicht wird mit [Blade templates](/https://laravel.com/docs/9.x/blade "Blade templates") generiert
+	- Die Dateien zur Ansicht befinden sich in `resources/views`
+	- Die jeweiligen Ansichten im `resources/views` Ordner erben die Ansicht von den Dateien, welche sich im `resources/views/layouts` befinden. Diese erben wiederrum von dem Masterlayout, welches sich im Ordner `resources/layouts/masterlayout` befindet
+- ## Styling
+	- Das styling der Website erflogt mit [Bootstrap](https://getbootstrap.com/ "Bootstrap")
+	- Für die Icons wird [Fontawesome](https://fontawesome.com/ "Fontawesome") verwendet
+    ------
+    __selbst noch herausfinden wie automatisch zu kompilieren und wo Dateien sind (mit vite)__:
+	- Die scss Dateien von [Bootstrap](https://getbootstrap.com/ "Bootstrap") und [Fontawesome](https://fontawesome.com/ "Fontawesome")  befinden sich im `x/x/x` Ordner und werden mit dem Befehl `x/x/x` kompiliert. Die kompilierte Datei wird in den Ordner `x/x/x` kompiliert und erhält den Dateinamen `app.css`.
+    -----
 
-Laravel is accessible, powerful, and provides tools required for large, robust applications.
+----
 
-## Learning Laravel
+- ## Bilder
+    - Bilder befinden sich im Ordner `storage/app/public`
+    - Die Bilder der Provider in `storage/app/public/providers` wird über das Webinterface (Admin) gemanaged, desshalb ist es nicht nötig diesen Ordner zu bearbeiten.
+    - Im Ordner `storage/app/public/img` befinden sich Bilder zur Gestaltung der Website, wie bsp. im Ordner `storage/app/public/img/bg` befinden sich die Hintergrundbilder zu den jeweiligen Sections auf den Websiten.
 
-Laravel has the most extensive and thorough [documentation](https://laravel.com/docs) and video tutorial library of all modern web application frameworks, making it a breeze to get started with the framework.
+----
 
-If you don't feel like reading, [Laracasts](https://laracasts.com) can help. Laracasts contains over 2000 video tutorials on a range of topics including Laravel, modern PHP, unit testing, and JavaScript. Boost your skills by digging into our comprehensive video library.
-
-## Laravel Sponsors
-
-We would like to extend our thanks to the following sponsors for funding Laravel development. If you are interested in becoming a sponsor, please visit the Laravel [Patreon page](https://patreon.com/taylorotwell).
-
-### Premium Partners
-
-- **[Vehikl](https://vehikl.com/)**
-- **[Tighten Co.](https://tighten.co)**
-- **[Kirschbaum Development Group](https://kirschbaumdevelopment.com)**
-- **[64 Robots](https://64robots.com)**
-- **[Cubet Techno Labs](https://cubettech.com)**
-- **[Cyber-Duck](https://cyber-duck.co.uk)**
-- **[Many](https://www.many.co.uk)**
-- **[Webdock, Fast VPS Hosting](https://www.webdock.io/en)**
-- **[DevSquad](https://devsquad.com)**
-- **[Curotec](https://www.curotec.com/services/technologies/laravel/)**
-- **[OP.GG](https://op.gg)**
-- **[WebReinvent](https://webreinvent.com/?utm_source=laravel&utm_medium=github&utm_campaign=patreon-sponsors)**
-- **[Lendio](https://lendio.com)**
-
-## Contributing
-
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](https://laravel.com/docs/contributions).
-
-## Code of Conduct
-
-In order to ensure that the Laravel community is welcoming to all, please review and abide by the [Code of Conduct](https://laravel.com/docs/contributions#code-of-conduct).
-
-## Security Vulnerabilities
-
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell via [taylor@laravel.com](mailto:taylor@laravel.com). All security vulnerabilities will be promptly addressed.
-
-## License
-
-The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+# Sprache
+- ## statische Übersetzung
+    - Für die statische Übersetzung werden vom Ordner `lang/` die Sprachen geladen. Der Dateityp kann entweder `json` oder `php` sein. In diesem Projekt wird `json` gewählt. Die Sprache wird in `config/app.php` mit dem Schlüssel 'locale' und dem Wert der Sprache gesetzt bsp. 'de' oder 'it'. In den json Dokumenten, welche den Kürzel der Sprache enthalten müssen, gibt es einen Schlüssel und einen Wert. Auf der Website kann man den Wert anzeigen, wenn man dies so ausgibt: `{{ __('Schluessel') }}`. Der Schlüssel muss in beiden Sprachen der Selbe sein.
+- ## dynamische Übersetzung
+    - Für die dynamische Übersetzung gibt es in der Datenbank jeweils eine neue Spalte für die jeweilige Sprache. Das Suffix der Spalte ist `_de` oder `_it`. Beispielsweise wenn es Ortschaften gibt, welche in beiden Sprachen anders geschrieben sind dann sehen die Spalten so aus: `ortschaft_de` und `ortschaft_it`. In den Blade Templates wird das Prefix angegeben und über eine Funktion, welche die aktuelle Sprache ausließt, das Suffix angehängt.
