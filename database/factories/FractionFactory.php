@@ -19,6 +19,7 @@ class FractionFactory extends Factory
         return [
             'name_de' => $this->faker->city(),
             'name_it' => $this->faker->city(),
+            // 'municipality_id' => 1,
         ];
     }
 }
