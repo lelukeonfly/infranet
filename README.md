@@ -24,7 +24,7 @@
 	- Für die Icons wird [Fontawesome](https://github.com/FortAwesome/Font-Awesome "Fontawesome") verwendet
 	- Die scss Dateien von [Bootstrap](https://getbootstrap.com/ "Bootstrap") und [Fontawesome](https://github.com/FortAwesome/Font-Awesome "Fontawesome") befinden sich im `node_modules/@fortawesome` und `node_modules/bootstrap` Ordner. Diese werden über die Datei `resources/sass/app.scss` geladen und werden mit dem Befehl `npm run dev` automatisch bei Veränderungen kompiliert. Im Falle von einem build mit dem Befehl `npm run build` in den Ordner `public/build/assets` kompiliert.
     - ### Icons
-        - Die Icons werden von [Fontawesome] verwendet, wobei man nach der Installation von [Fontawesome] den Ordner `node_modules/@fortawesome/fontawesome-free/webfonts` in den Ordner `storage/app/public/` kopieren muss, dass die Icons auch für den Benutzer zugänglich sind.
+        - Die Icons werden von [Fontawesome](https://github.com/FortAwesome/Font-Awesome "Fontawesome") verwendet, wobei man nach der Installation von [Fontawesome](https://github.com/FortAwesome/Font-Awesome "Fontawesome") den Ordner `node_modules/@fortawesome/fontawesome-free/webfonts` in den Ordner `storage/app/public/` kopieren muss, dass die Icons auch für den Benutzer zugänglich sind.
 
 ----
 
