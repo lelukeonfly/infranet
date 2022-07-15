@@ -9,7 +9,7 @@ class Fraction extends Model
 {
     use HasFactory;
 
-    public function municipalties()
+    public function municipalities()
     {
         return $this->belongsTo(Municipality::class);
     }

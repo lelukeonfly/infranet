@@ -1,5 +1,6 @@
 <?php
 
+use App\Models\Municipality;
 use App\Models\News;
 use App\Models\Provider;
 use Illuminate\Support\Facades\Route;
@@ -17,6 +18,8 @@ use Illuminate\Support\Facades\Route;
 
 //tmp redirect
 Route::redirect('/', app()->getLocale(), 301);
+
+Route::view('/test', 'test', ['municipalities' => Municipality::with('streets')->get()]);
 
 Route::group([
     'prefix' => '{lang}',
@@ -48,4 +51,5 @@ Route::group([
             'article' => $article,
         ]);
     })->name('article');
+
 });

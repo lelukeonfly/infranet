@@ -19,4 +19,9 @@ class Address extends Model
         return $this->belongsTo(Street::class);
     }
 
+    public function number()
+    {
+        return $this->hasOne(Number::class);
+    }
+
 }

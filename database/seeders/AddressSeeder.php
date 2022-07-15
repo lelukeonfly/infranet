@@ -2,7 +2,9 @@
 
 namespace Database\Seeders;
 
+use App\Models\Municipality;
 use Illuminate\Database\Seeder;
+use Illuminate\Support\Facades\Log;
 
 class AddressSeeder extends Seeder
 {
@@ -13,6 +15,6 @@ class AddressSeeder extends Seeder
      */
     public function run()
     {
-
+        dd(Municipality::first()->streets());
     }
 }
