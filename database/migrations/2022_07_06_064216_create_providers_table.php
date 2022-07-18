@@ -27,6 +27,7 @@ return new class extends Migration
             $table->string('name')->unique(); //name of the provider
             $table->string('img')->unique();
             $table->string('url')->unique();
+            $table->boolean('show')->default(0);
             $table->timestamps();
         });
     }

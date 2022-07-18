@@ -40,7 +40,7 @@ Route::group([
         return view('root', [
             'lang' => $lang,
             'news' => News::limit(6)->latest()->get(),
-            'providers' => Provider::inRandomOrder()->get(),
+            'providers' => Provider::inRandomOrder()->where('show', true)->get(),
         ]);
     })->name('home');
 

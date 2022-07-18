@@ -47,6 +47,7 @@ class ProviderFactory extends Factory
             'img' => $path,
             //'img' => $this->faker->image,
             'url' => $this->faker->url(),
+            'show' => rand(0,1),
         ];
     }
 }
