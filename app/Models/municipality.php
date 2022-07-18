@@ -28,7 +28,8 @@ class Municipality extends Model
 
     public function numbers()
     {
-        $this->hasManyThrough(Number::class, Street::class);
+        //working
+        //https://github.com/staudenmeir/eloquent-has-many-deep#manytomany--manytomany
+        return $this->hasManyDeep(Number::class, ['municipality_street', Street::class, 'number_street']);
     }
-
 }

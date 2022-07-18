@@ -1,6 +1,6 @@
 <table border="1">
     @foreach ($municipalities as $municipality)
-    {{ $municipality->numbers }}
+    {{-- {{ $municipality->numbers }} --}}
         <tr>
             <td><h2>{{ $municipality->id }}</h2></td>
             <td><h2>{{ $municipality->name_de }}</h2></td>

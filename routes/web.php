@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\RegisterController;
 use App\Models\Municipality;
 use App\Models\News;
 use App\Models\Provider;
@@ -19,7 +20,13 @@ use Illuminate\Support\Facades\Route;
 //tmp redirect
 Route::redirect('/', app()->getLocale(), 301);
 
-Route::view('/test', 'test', ['municipalities' => Municipality::with('streets')->get()]);
+
+Route::get('/register', [RegisterController::class, 'create']);
+Route::post('/register', [RegisterController::class, 'store']);
+
+
+Route::view('/test', 'test', ['municipalities' => Municipality::with(['streets','numbers'])->get()]);
+// Route::view('/test', 'test', ['municipalities' => Municipality::with(['streets'])->get()]);
 
 Route::group([
     'prefix' => '{lang}',
