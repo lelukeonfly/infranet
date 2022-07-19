@@ -20,7 +20,7 @@
                            class="form-label">Name</label>
 
                     <input type="text"
-                           class="form-control"
+                           class="form-control @error('name') border-danger @enderror"
                            name="name"
                            id="name"
                            aria-describedby="name"
@@ -43,7 +43,7 @@
                            class="form-label">Username</label>
 
                     <input type="text"
-                           class="form-control"
+                           class="form-control @error('username') border-danger @enderror"
                            name="username"
                            id="username"
                            aria-describedby="username"
@@ -66,7 +66,7 @@
                            class="form-label">Email</label>
 
                     <input type="email"
-                           class="form-control"
+                           class="form-control @error('email') border-danger @enderror"
                            name="email"
                            id="email"
                            aria-describedby="emailHelpId"
@@ -97,7 +97,7 @@
                            class="form-label">Password</label>
 
                     <input type="password"
-                           class="form-control"
+                           class="form-control @error('password') border-danger @enderror"
                            name="password"
                            id="password"
                            placeholder="Password">
@@ -127,7 +127,7 @@
                            class="form-label">Provider</label>
 
                     <input type="text"
-                           class="form-control"
+                           class="form-control @error('provider') border-danger @enderror"
                            name="provider"
                            id="provider"
                            aria-describedby="helpId"
