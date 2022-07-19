@@ -35,10 +35,10 @@ TODO:
         Schema::create('addresses', function (Blueprint $table) {
             $table->id();
             //foreign keys
-            $table->unsignedBigInteger('municipality_id');//done
-            $table->unsignedBigInteger('fraction_id')->nullable();//done
-            $table->unsignedBigInteger('street_id');//done
-            $table->unsignedBigInteger('number_id');//done
+            $table->foreignId('municipality_id')->constrained()->cascadeOnDelete();
+            $table->foreignId('fraction_id')->constrained()->cascadeOnDelete();
+            $table->foreignId('street_id')->constrained()->cascadeOnDelete();
+            $table->foreignId('number_id')->constrained()->cascadeOnDelete();
             //foreign keys/
             $table->string('istatnciv');
             $table->string('egon');

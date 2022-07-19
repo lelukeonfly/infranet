@@ -15,9 +15,6 @@ return new class extends Migration
     {
         Schema::create('numbers', function (Blueprint $table) {
             $table->id();
-            //foreign keys
-            //$table->integer('street_id');
-            //foreign keys/
             $table->string('number');
             $table->timestamps();
         });

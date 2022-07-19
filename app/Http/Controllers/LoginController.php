@@ -21,17 +21,17 @@ class LoginController extends Controller
             'password' => ['required'],
         ]);
 
-        //when pass check login attempt and log in
-        if (auth()->attempt($credentials)) {
-            return redirect()->route('home', app()->getLocale())->with('success', 'Welcome back <strong>' . auth()->user()['name'].'</strong>!');
+        //if the authentication fails user will be sent back to login page with error message
+        if (!auth()->attempt($credentials)) {
+            return back()
+                ->withInput()
+                ->withErrors(['login' => 'Email or Password authentication failed']);
         }
 
-        //when validation falis
-        return back()
-            ->withInput()
-            ->withErrors(['login' => 'Email or Password authentication failed']);
-        //other varaint
-        // throw ValidationException::withMessages(['login' => 'Email or Password are not correct!']);
+
+        //if authentication doesnt fail:
+        session()->regenerate();
+        return redirect()->route('home', app()->getLocale())->with('success', 'Welcome back <strong>' . auth()->user()['name'] . '</strong>!');
     }
 
     public function destroy()
