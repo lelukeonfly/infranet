@@ -58,7 +58,7 @@
                        id="email"
                        aria-describedby="emailHelpId"
                        placeholder="Email"
-                       value="{{ old('username') }}">
+                       value="{{ old('email') }}">
                 @error('email')
                 <small id="helpId"
                        class="form-text text-danger">

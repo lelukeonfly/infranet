@@ -1,7 +1,7 @@
 <?php
 
+use App\Http\Controllers\LoginController;
 use App\Http\Controllers\RegisterController;
-use App\Http\Controllers\SessionsController;
 use App\Models\Municipality;
 use App\Models\News;
 use App\Models\Provider;
@@ -18,10 +18,7 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-//tmp redirect
-Route::redirect('/', app()->getLocale(), 301);
-
-
+//logins and register requests
 Route::get('/register', [RegisterController::class, 'create'])
     ->name('register')
     ->middleware('guest');
@@ -29,11 +26,18 @@ Route::get('/register', [RegisterController::class, 'create'])
 Route::post('/register', [RegisterController::class, 'store'])
     ->middleware('guest');
 
-Route::get('/login', [SessionsController::class, 'create'])
+Route::get('/login', [LoginController::class, 'create'])
     ->middleware('guest');
 
-Route::post('/logout', [SessionsController::class, 'destroy'])
+Route::post('/login', [LoginController::class, 'login'])
+    ->middleware('guest');
+
+Route::post('/logout', [LoginController::class, 'destroy'])
     ->middleware('auth');
+
+//tmp redirect
+Route::redirect('/', app()->getLocale(), 301);
+
 
 
 

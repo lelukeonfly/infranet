@@ -29,7 +29,7 @@
                     <a class="nav-link" href="#">{{ __('nav.lang') }}</a>
                 </li>
             </ul>
-            <div class="nav-item">
+            <div class="nav-item d-flex float-end align-items-center">
                 @auth
                     {{-- when logged in as any --}}
                     <a href="/dashboard" class="nav-link">{{ __('nav.dashboard') }}</a>
