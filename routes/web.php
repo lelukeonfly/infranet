@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\LanguageController;
 use App\Http\Controllers\LoginController;
 use App\Http\Controllers\RegisterController;
 use App\Models\Municipality;
@@ -17,6 +18,8 @@ use Illuminate\Support\Facades\Route;
 | contains the "web" middleware group. Now create something great!
 |
 */
+
+Route::get('/langtest', [LanguageController::class, 'index']);
 
 //logins and register requests
 Route::get('/register', [RegisterController::class, 'create'])
@@ -40,7 +43,111 @@ Route::redirect('/', app()->getLocale(), 301);
 
 
 
-
+#Lang::
+#first -> cookie
+#second if no cookie -> browser language
+#if browser lang !(de|it) -> it
+#https://laravel.com/docs/9.x/urls#default-values
+#https://laravel.com/docs/9.x/urls#default-values
+#https://laravel.com/docs/9.x/urls#default-values
+#https://laravel.com/docs/9.x/urls#default-values
+#https://laravel.com/docs/9.x/urls#default-values
+#https://laravel.com/docs/9.x/urls#default-values
+#https://laravel.com/docs/9.x/urls#default-values
+#https://laravel.com/docs/9.x/urls#default-values
+#https://laravel.com/docs/9.x/urls#default-values
+#https://laravel.com/docs/9.x/urls#default-values
+#https://laravel.com/docs/9.x/urls#default-values
+#https://laravel.com/docs/9.x/urls#default-values
+#https://laravel.com/docs/9.x/urls#default-values
+#https://laravel.com/docs/9.x/urls#default-values
+#https://laravel.com/docs/9.x/urls#default-values
+#https://laravel.com/docs/9.x/urls#default-values
+#https://laravel.com/docs/9.x/urls#default-values
+#https://laravel.com/docs/9.x/urls#default-values
+#https://laravel.com/docs/9.x/urls#default-values
+#https://laravel.com/docs/9.x/urls#default-values
+#https://laravel.com/docs/9.x/urls#default-values
+#https://laravel.com/docs/9.x/urls#default-values
+#https://laravel.com/docs/9.x/urls#default-values
+#https://laravel.com/docs/9.x/urls#default-values
+#https://laravel.com/docs/9.x/urls#default-values
+#https://laravel.com/docs/9.x/urls#default-values
+#https://laravel.com/docs/9.x/urls#default-values
+#https://laravel.com/docs/9.x/urls#default-values
+#https://laravel.com/docs/9.x/urls#default-values
+#https://laravel.com/docs/9.x/urls#default-values
+#https://laravel.com/docs/9.x/urls#default-values
+#https://laravel.com/docs/9.x/urls#default-values
+#https://laravel.com/docs/9.x/urls#default-values
+#https://laravel.com/docs/9.x/urls#default-values
+#https://laravel.com/docs/9.x/urls#default-values
+#https://laravel.com/docs/9.x/urls#default-values
+#https://laravel.com/docs/9.x/urls#default-values
+#https://laravel.com/docs/9.x/urls#default-values
+#https://laravel.com/docs/9.x/urls#default-values
+#https://laravel.com/docs/9.x/urls#default-values
+#https://laravel.com/docs/9.x/urls#default-values
+#https://laravel.com/docs/9.x/urls#default-values
+#https://laravel.com/docs/9.x/urls#default-values
+#https://laravel.com/docs/9.x/urls#default-values
+#https://laravel.com/docs/9.x/urls#default-values
+#https://laravel.com/docs/9.x/urls#default-values
+#https://laravel.com/docs/9.x/urls#default-values
+#https://laravel.com/docs/9.x/urls#default-values
+#https://laravel.com/docs/9.x/urls#default-values
+#https://laravel.com/docs/9.x/urls#default-values
+#https://laravel.com/docs/9.x/urls#default-values
+#https://laravel.com/docs/9.x/urls#default-values
+#https://laravel.com/docs/9.x/urls#default-values
+#https://laravel.com/docs/9.x/urls#default-values
+#https://laravel.com/docs/9.x/urls#default-values
+#https://laravel.com/docs/9.x/urls#default-values
+#https://laravel.com/docs/9.x/urls#default-values
+#https://laravel.com/docs/9.x/urls#default-values
+#https://laravel.com/docs/9.x/urls#default-values
+#https://laravel.com/docs/9.x/urls#default-values
+#https://laravel.com/docs/9.x/urls#default-values
+#https://laravel.com/docs/9.x/urls#default-values
+#https://laravel.com/docs/9.x/urls#default-values
+#https://laravel.com/docs/9.x/urls#default-values
+#https://laravel.com/docs/9.x/urls#default-values
+#https://laravel.com/docs/9.x/urls#default-values
+#https://laravel.com/docs/9.x/urls#default-values
+#https://laravel.com/docs/9.x/urls#default-values
+#https://laravel.com/docs/9.x/urls#default-values
+#https://laravel.com/docs/9.x/urls#default-values
+#https://laravel.com/docs/9.x/urls#default-values
+#https://laravel.com/docs/9.x/urls#default-values
+#https://laravel.com/docs/9.x/urls#default-values
+#https://laravel.com/docs/9.x/urls#default-values
+#https://laravel.com/docs/9.x/urls#default-values
+#https://laravel.com/docs/9.x/urls#default-values
+#https://laravel.com/docs/9.x/urls#default-values
+#https://laravel.com/docs/9.x/urls#default-values
+#https://laravel.com/docs/9.x/urls#default-values
+#https://laravel.com/docs/9.x/urls#default-values
+#https://laravel.com/docs/9.x/urls#default-values
+#https://laravel.com/docs/9.x/urls#default-values
+#https://laravel.com/docs/9.x/urls#default-values
+#https://laravel.com/docs/9.x/urls#default-values
+#https://laravel.com/docs/9.x/urls#default-values
+#https://laravel.com/docs/9.x/urls#default-values
+#https://laravel.com/docs/9.x/urls#default-values
+#https://laravel.com/docs/9.x/urls#default-values
+#https://laravel.com/docs/9.x/urls#default-values
+#https://laravel.com/docs/9.x/urls#default-values
+#https://laravel.com/docs/9.x/urls#default-values
+#https://laravel.com/docs/9.x/urls#default-values
+#https://laravel.com/docs/9.x/urls#default-values
+#https://laravel.com/docs/9.x/urls#default-values
+#https://laravel.com/docs/9.x/urls#default-values
+#https://laravel.com/docs/9.x/urls#default-values
+#https://laravel.com/docs/9.x/urls#default-values
+#https://laravel.com/docs/9.x/urls#default-values
+#https://laravel.com/docs/9.x/urls#default-values
+#https://laravel.com/docs/9.x/urls#default-values
+#https://laravel.com/docs/9.x/urls#default-values
 Route::group([
     'prefix' => '{lang}',
     'where' => ['lang' => 'de|it']
