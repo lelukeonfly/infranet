@@ -7,8 +7,9 @@
         {{-- <a href="/news/{{ $article->{'slug_'.app()->getLocale()} }}"> --}}
         {{-- <a href="/{{ app()->getLocale() }}/news/{{ $article->id }}"> --}}
 
-        <a href="{{ route('article', [app()->getLocale(), $article->{'slug_' . app()->getLocale()}]) }}">
-            <div class="m-2 bg-dark">
+        <a
+           href="{{ route('article', [app()->getLocale(), $article->{'slug_' . app()->getLocale()}]) }}">
+            <div class="bg-dark m-2">
                 <h1>{{ $article->{'title_' . app()->getLocale()} }}</h1>
                 <p>{{ $article->{'content_' . app()->getLocale()} }}</p>
             </div>

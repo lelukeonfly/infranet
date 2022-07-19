@@ -31,7 +31,7 @@ class LoginController extends Controller
 
         //if authentication doesnt fail:
         session()->regenerate();
-        return redirect()->route('home', app()->getLocale())->with('success', 'Welcome back <strong>' . auth()->user()['name'] . '</strong>!');
+        return redirect()->route('home', app()->getLocale())->with('success', 'Welcome back <strong>' . auth()->user()->name . '</strong>!');
     }
 
     public function destroy()

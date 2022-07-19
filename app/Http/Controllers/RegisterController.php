@@ -16,7 +16,8 @@ class RegisterController extends Controller
     public function store()
     {
         //creates the user and validates the inputs first
-        $user = User::create(request()->validate([
+        //$user =
+        User::create(request()->validate([
             'name' => ['required', 'min:2', 'max:255',],
             'username' => ['required', 'min:5', 'max:255', Rule::unique('users','username'),],
             'email' => ['required', 'email', 'max:255', Rule::unique('users', 'email'),],
