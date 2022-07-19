@@ -9,5 +9,5 @@
     @include('partials.container4')
     @include('partials.container5')
     @include('partials.container6')
-    @include('partials.registered_alert')
+    @include('partials.alert')
 @endsection

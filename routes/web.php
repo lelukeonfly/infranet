@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\RegisterController;
+use App\Http\Controllers\SessionsController;
 use App\Models\Municipality;
 use App\Models\News;
 use App\Models\Provider;
@@ -21,12 +22,20 @@ use Illuminate\Support\Facades\Route;
 Route::redirect('/', app()->getLocale(), 301);
 
 
-Route::get('/register', [RegisterController::class, 'create']);
-Route::post('/register', [RegisterController::class, 'store']);
+Route::get('/register', [RegisterController::class, 'create'])
+    ->name('register')
+    ->middleware('guest');
+
+Route::post('/register', [RegisterController::class, 'store'])
+    ->middleware('guest');
+
+Route::get('/login', [SessionsController::class, 'create'])
+    ->middleware('guest');
+
+Route::post('/logout', [SessionsController::class, 'destroy'])
+    ->middleware('auth');
 
 
-Route::view('/test', 'test', ['municipalities' => Municipality::with(['streets','numbers'])->get()]);
-// Route::view('/test', 'test', ['municipalities' => Municipality::with(['streets'])->get()]);
 
 Route::group([
     'prefix' => '{lang}',
@@ -34,7 +43,7 @@ Route::group([
 ], function () {
 
     //tmp redirect
-    Route::redirect('/', '/'.app()->getLocale().'/home', 301);
+    Route::redirect('/', '/' . app()->getLocale() . '/home', 301);
 
     Route::get('/home', function ($lang) {
         return view('root', [
@@ -52,11 +61,18 @@ Route::group([
         ]);
     })->name('news');
 
-    Route::get('/news/{article:slug_'.app()->getLocale().'}', function ($lang ,News $article) {
+    Route::get('/news/{article:slug_' . app()->getLocale() . '}', function ($lang, News $article) {
         return view('article', [
             'lang' => $lang,
             'article' => $article,
         ]);
     })->name('article');
-
 });
+
+
+
+/**
+ * TESTING:::
+ */
+Route::view('/test', 'test', ['municipalities' => Municipality::with(['streets', 'numbers'])->get()]);
+// Route::view('/test', 'test', ['municipalities' => Municipality::with(['streets'])->get()]);

@@ -93,7 +93,7 @@
     window.onscroll = function() {
         let currentScrollPos = window.pageYOffset
         let navbar = document.getElementById('navbar')
-        if (prevScrollpos > currentScrollPos) {
+        if (prevScrollpos >= currentScrollPos) {
             document.getElementById("navbar").style.top = 0
         } else {
             navbar.style.top = (-1 * navbar.offsetHeight) + "px"
