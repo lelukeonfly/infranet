@@ -1,2 +1,0 @@
-<?php
-\App\Models\Municipality::all();

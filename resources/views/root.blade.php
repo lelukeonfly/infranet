@@ -9,14 +9,5 @@
     @include('partials.container4')
     @include('partials.container5')
     @include('partials.container6')
+    @include('partials.registered_alert')
 @endsection
-
-{{-- @section('providers')
-    @forelse ($providers as $provider)
-        <a href="{{ $provider->url }}">
-            <img src="/storage/{{ $provider->img }}" alt="problems occured while loading the image" loading="lazy">
-        </a>
-    @empty
-        No providers found
-    @endforelse
-@endsection --}}
