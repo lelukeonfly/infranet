@@ -2,9 +2,7 @@
 
 namespace Database\Factories;
 
-use App\Models\Fraction;
 use App\Models\Municipality;
-use App\Models\Number;
 use App\Models\Street;
 use Illuminate\Database\Eloquent\Factories\Factory;
 
@@ -20,15 +18,22 @@ class AddressFactory extends Factory
      */
     public function definition()
     {
+
+        $municipality = Municipality::inRandomOrder()->pluck('id')->first();
+        $fraction = Municipality::find($municipality)->fractions()->inRandomOrder()->pluck('id')->first();
+        $street = Municipality::find($municipality)->streets()->inRandomOrder()->pluck('id')->first();
+        $number = Street::find($street)->numbers()->inRandomOrder()->pluck('id')->first();
+
         return [
-            'municipality_id' => Municipality::factory(5)->create(),
-            'fraction_id' => Fraction::factory(5)->create(),
-            'street_id' => Street::factory(5)->create(),
-            'number_id' => Number::factory(5)->create(),
-            'istatnciv' => $this->faker->sentence(),
-            'egon' => $this->faker->randomAscii(),
-            'lat' => $this->faker->numerify('##.############'),
-            'long' => $this->faker->numerify('###.############')
+            'municipality_id' => $municipality,
+            'fraction_id' => $fraction,
+            'street_id' => $street,
+            'number_id' => $number,
+            // 'istatnciv' => fake()->asciify('**********'),
+            'istatnciv' => fake()->countryCode(),
+            'egon' => fake()->asciify('**********'),
+            'lat' => fake()->numerify('##.##########'),
+            'long' => fake()->numerify('##.##########'),
         ];
     }
 }

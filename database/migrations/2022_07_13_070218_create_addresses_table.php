@@ -36,7 +36,7 @@ TODO:
             $table->id();
             //foreign keys
             $table->foreignId('municipality_id')->constrained()->cascadeOnDelete();
-            $table->foreignId('fraction_id')->constrained()->cascadeOnDelete();
+            $table->foreignId('fraction_id')->nullable()->constrained()->cascadeOnDelete();
             $table->foreignId('street_id')->constrained()->cascadeOnDelete();
             $table->foreignId('number_id')->constrained()->cascadeOnDelete();
             //foreign keys/
