@@ -1,3 +1,19 @@
+# Probleme bei der Installation:
+- Datenbank "infranet erstellen"
+- tabelle municipalities erstellen
+- composer install
+- php artisan migrate:fresh
+- npm install
+- npm run dev
+- php artisan storage:link
+- ordner providers und banners in /storage/app/public erstellen
+- copy webfonts form /node_modules/@fortawesome/webfonts to /storage/app/public/
+
+----
+
+# BUGS:
+- Navbar öffnet und schließt sich während dem Ausfüllen von Formularen js in footer
+
 # Datenbank
 - Die Datenbank migrationsdateien befinden sich in `database/migrations`
 - Diese sind zuständig, die Datenbank zu erstellen und werden aufsteigend nach dessen Dateinamen ausgeführt
